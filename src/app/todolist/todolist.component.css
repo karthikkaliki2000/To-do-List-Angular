@@ -1,0 +1,67 @@
+/* Centering the task list */
+.list-group {
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Task list items */
+.list-group-item {
+  font-size: 18px;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.list-group-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Completed task styling */
+.text-decoration-line-through {
+  color: #6c757d;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Buttons container */
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Success button (mark completed) */
+.btn-success {
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Delete button */
+.btn-danger {
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* No task message */
+.alert-info {
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #e9f5ff;
+  color: #007bff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}

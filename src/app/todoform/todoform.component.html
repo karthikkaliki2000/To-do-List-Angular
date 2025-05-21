@@ -1,0 +1,39 @@
+<h1 class="text-center text-primary">To-Do List</h1>
+
+
+
+<!-- Task Input Form -->
+<div class="row">
+  <div class="col-6 mx-auto">
+    <div class="form-group">
+      <label>Add New Task:</label>
+      <input type="text" [(ngModel)]="taskName" (keydown.enter)="addTask()" 
+             class="form-control" placeholder="Enter Task Name">
+    </div>
+  </div>
+
+  <div class="col-3 mt-4">
+    <button class="btn btn-success" (click)="addTask()" [disabled]="!taskName.trim().length">
+      Add Task
+    </button>
+  </div>
+
+  <div class="col-3 mt-4">
+    <button class="btn btn-danger" (click)="resetTask()" [disabled]="!taskName.trim().length">
+      Reset
+    </button>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="taskToast" class="toast align-items-center text-white bg-success border-0 
+     position-fixed top-0 start-50 translate-middle-x mt-3" role="alert"
+     data-bs-autohide="true" data-bs-delay="3000">
+  <div class="d-flex">
+    <div class="toast-body">Task added successfully!</div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+  </div>
+</div>
+
+
+
